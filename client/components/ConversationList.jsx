@@ -6,43 +6,46 @@ import Image from "next/image";
 import friends from "../assets/icons/friends.svg";
 import nitro from "../assets/icons/nitro.svg";
 
-import avatar1 from '../assets/avatar-1.webp'
-import avatar2 from '../assets/avatar-2.png'
-import avatar3 from '../assets/avatar-3.webp'
-import avatar4 from '../assets/avatar-4.webp'
+import avatar1 from "../assets/avatar-1.webp";
+import avatar2 from "../assets/avatar-2.png";
+import avatar3 from "../assets/avatar-3.webp";
+import avatar4 from "../assets/avatar-4.webp";
+import DmCard from "./DmCard";
 
 const DUMMY_DMS = [
-    {
-      id: 1,
-      name: 'Bill Gates',
-      avatar: avatar1,
-    },
-    {
-      id: 2,
-      name: 'Mark Zuckerberg',
-      avatar: avatar2,
-    },
-    {
-      id: 3,
-      name: 'Dependabot',
-      avatar: avatar3,
-    },
-    {
-      id: 4,
-      name: 'Defendabot',
-      avatar: avatar4,
-    },
-  ]
-
+  {
+    id: 1,
+    name: "Bill Gates",
+    avatar: avatar1,
+  },
+  {
+    id: 2,
+    name: "Mark Zuckerberg",
+    avatar: avatar2,
+  },
+  {
+    id: 3,
+    name: "Dependabot",
+    avatar: avatar3,
+  },
+  {
+    id: 4,
+    name: "Defendabot",
+    avatar: avatar4,
+  },
+];
 
 const ConversationList = () => {
-    const [dms, setDms] = useState(DUMMY_DMS)
-
+  const [dms, setDms] = useState(DUMMY_DMS);
 
   return (
     <div className={styles.conversations}>
       <div className={styles.conversationListTop}>
-        <input type="search" className={styles.searchField} placeholder="Find or start a conversation" />
+        <input
+          type="search"
+          className={styles.searchField}
+          placeholder="Find or start a conversation"
+        />
       </div>
       <div className={styles.conversationsContainer}>
         <button className={styles.elementsContainer}>
@@ -69,15 +72,22 @@ const ConversationList = () => {
           </div>
           <p>Nitro</p>
         </button>
-      <div className={styles.dmTitle}>
-        <h2>Direct Messages</h2>
-      </div>
+        <div className={styles.dmTitle}>
+          <h2>Direct Messages</h2>
+        </div>
 
-      {
-        dms.map((dm, index) => (
-            <div key={index}>Dm Card</div>
-        ))
-      }
+        {dms.map((dm, index) => (
+          <DmCard
+            key={index}
+            name={dm.name}
+            id={dm.id}
+            avatar={
+              dm.avatar ||
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU"
+            }
+            status="online"
+          />
+        ))}
       </div>
     </div>
   );

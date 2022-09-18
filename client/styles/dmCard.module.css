@@ -1,0 +1,19 @@
+.dmCard {
+    @apply flex items-center w-[105%] select-none transition-all ml-1 rounded-md cursor-pointer py-1.5 px-[7px];
+}
+
+.dmCard .status {
+    @apply absolute top-5 bg-green w-4 h-4 left-5;
+}
+
+.dmCard:hover {
+    @apply bg-hoverGrey;
+}
+
+.dmAvatarContainer {
+    @apply relative mr-2.5;
+}
+
+.dmAvatar {
+    @apply mr-3.5 bg-lightGrey w-8 h-8 rounded-full;
+}
