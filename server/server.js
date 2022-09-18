@@ -1,13 +1,13 @@
-import express from "express";
-import Gun from "gun";
-import cors from "cors";
+const express = require("express")
+const GUN = require('gun');
+const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 9000;
 
 app.use(cors);
 
-app.use(Gun.serve);
+app.use(GUN.serve);
 
 app.get("/", (_, res) => {
   res.status(200).send(">_ DEBUG: Discord Node is Live");
@@ -19,4 +19,4 @@ const server = app.listen(port, () => {
   );
 });
 
-Gun({ web: server });
+GUN({ web: server });
