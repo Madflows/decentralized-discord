@@ -12,7 +12,7 @@ const RoomAvatar = ({id, avatar, name}) => {
 
 
   return (
-    <div className={styles.wrapper} onClick={changeUrl}>
+    <button className={styles.wrapper} onClick={changeUrl}>
         <div className={`group ${styles.roomAvatar}`}>
             <Image 
                 src={avatar}
@@ -26,7 +26,7 @@ const RoomAvatar = ({id, avatar, name}) => {
             </div>
         </div>
 
-    </div>
+    </button>
   )
 }
 
