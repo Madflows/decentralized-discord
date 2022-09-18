@@ -1,0 +1,28 @@
+.wrapper{
+    @apply relative flex items-center justify-center rounded-full;
+}
+
+.roomAvatar{
+    @apply transition mb-1;
+}
+
+.roomAvatar::before{
+    content: '';
+    @apply w-[17px] top-[20px] h-[20%] block bg-white rounded-[10px] rounded-tl-none rounded-bl-none left-[-12px] absolute transition-all;
+}
+
+.roomAvatar:hover::before{
+    @apply h-[55%] top-[12px];
+}
+
+.roomAvatarImage{
+    @apply w-[48px] h-[48px] bg-lightGrey rounded-full mb-[10px] relative left-[12px] transition-all cursor-pointer;
+}
+
+.roomAvatarImage:hover{
+    @apply rounded-2xl;
+}
+
+.tooltip {
+    @apply absolute top-[50%] flex items-center justify-center py-2 px-2 scale-0 rounded-md bg-gray-900 translate-y-[-50%] left-[120%] z-50;
+}
