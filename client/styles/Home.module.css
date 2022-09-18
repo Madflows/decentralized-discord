@@ -1,7 +1,15 @@
-.wrapper{
-  @apply h-screen flex items-start;
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
 }
 
 .main {
-  @apply h-screen overflow-y-scroll relative bg-slate-600 flex-[25] flex w-screen;
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  flex: 25;
+  display: flex;
+  width: 100vw;
+  @apply bg-lightGrey;
 }
