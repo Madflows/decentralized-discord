@@ -28,7 +28,7 @@
 }
 
 .dmTitle {
-    @apply opacity-40 font-extrabold mt-5 mb-5;
+    @apply opacity-40 font-extrabold mt-5 mb-5 uppercase tracking-wide;
 }
 
 
