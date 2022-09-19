@@ -1,6 +1,7 @@
 import React from 'react';
 import {  useEffect, useState} from "react";
 import { useRouter } from 'next/router';
+import { CaretDown, CaretUp } from 'phosphor-react';
 
 import styles from '../styles/Sidebar.module.css';
 import RoomAvatar from './RoomAvatar';
@@ -36,13 +37,20 @@ const DUMMY_CHANNELS = [
 const SideBar = () => {
   const router = useRouter();
   const [channels, setChannels] = useState(DUMMY_CHANNELS);
+  const [mobileAct, setMobileAct] = useState(false);
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper}`} data-active={mobileAct}>
       {
         channels.map((channel, index) => (
           <RoomAvatar key={index} id={channel.id} avatar={channel.avatar} name={channel.name} />
         ))
       }
+
+      <div className='flex sm:hidden absolute right-2 bottom-6'>
+        <button onClick={() => setMobileAct(!mobileAct)} className='cursor-pointer bg-semiDeepGrey rounded-full h-fit py-2 px-2'>
+        <CaretUp size={24} weight="bold" className={`transition-all ${mobileAct && "rotate-180"}`} />
+        </button>
+      </div>
     </div>
   )
 }

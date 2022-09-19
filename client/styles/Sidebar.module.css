@@ -1,6 +1,15 @@
 .wrapper {
   height: 100%;
   position: relative;
-  flex: 1;
   padding-top: 30px;
+  @apply w-[70px] flex flex-col justify-start bottom-0;
+}
+
+@media screen and (max-width: 650px) {
+  .wrapper {
+    @apply fixed z-50 bg-deepGrey bottom-0 left-0 flex flex-row gap-4 shadow-sm rounded-tl-lg rounded-tr-lg w-full py-3 px-4 max-h-[80px] h-full transition-all scroll-m-6;
+  }
+  .wrapper[data-active=true]{
+    @apply max-h-[200px] rounded-tl-3xl rounded-tr-3xl shadow-lg;
+  }
 }

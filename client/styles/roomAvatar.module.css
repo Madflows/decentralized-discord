@@ -8,7 +8,7 @@
 
 .roomAvatar::before{
     content: '';
-    @apply w-[17px] top-[20px] h-[20%] block bg-white rounded-[10px] rounded-tl-none rounded-bl-none left-[-12px] absolute transition-all;
+    @apply w-[17px] hidden top-[20px] h-[20%] md:block bg-white rounded-[10px] rounded-tl-none rounded-bl-none left-[-12px] absolute transition-all;
 }
 
 .roomAvatar:hover::before{
@@ -24,5 +24,5 @@
 }
 
 .tooltip {
-    @apply absolute top-[50%] flex items-center justify-center py-2 px-2 scale-0 rounded-md bg-gray-900 translate-y-[-50%] left-[120%] z-50;
+    @apply absolute top-[-70%] left-[-50%] sm:top-[50%] flex items-center justify-center py-2 px-2 scale-0 rounded-md bg-gray-900 translate-y-[-50%] sm:left-[120%] z-50;
 }
