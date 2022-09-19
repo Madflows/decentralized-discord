@@ -1,0 +1,8 @@
+.messagesContainer {
+  @apply px-5 pt-8 pb-24;
+}
+
+.chatView {
+  @apply h-full relative w-full;
+  flex-grow: 6;
+}
