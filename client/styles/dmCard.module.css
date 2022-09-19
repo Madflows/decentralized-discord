@@ -3,7 +3,7 @@
 }
 
 .dmCard .status {
-    @apply absolute top-5 bg-green w-4 h-4 left-5;
+    @apply absolute top-5 bg-green left-5;
 }
 
 .dmCard:hover {
@@ -17,3 +17,32 @@
 .dmAvatar {
     @apply mr-3.5 bg-lightGrey w-8 h-8 rounded-full;
 }
+
+.dmCardStatus {
+    width: 16px;
+    height: 16px;
+    border-radius: 41px;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    @apply bg-green border-[3px] border-semiDeepGrey;
+  }
+  
+  .dmCardName {
+    opacity: 0.6;
+  }
+  
+  .dm-avatar-container > status {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+  }
+  
+  .status {
+    width: 16px;
+    height: 16px;
+    border-radius: 41px;
+    position: absolute;
+    left: 80px;
+  }
+  

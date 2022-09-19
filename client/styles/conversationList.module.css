@@ -1,5 +1,5 @@
 .conversations {
-    @apply h-full relative bg-semiDeepGrey;
+    @apply h-full relative bg-[#2f3136];
 }
 
 .conversationsContainer {
@@ -7,7 +7,7 @@
 }
 
 .conversationListTop {
-    @apply flex items-center justify-between border-b-[1px] border-[#2022256e] p-2.5 z-[10] w-full bg-semiDeepGrey mb-4;
+    @apply flex items-center justify-between border-b-[1px] border-[#2022256e] p-2.5 z-[10] w-full bg-[#2f3136] mb-4;
 }
 
 .elementsContainer {

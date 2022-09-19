@@ -19,7 +19,7 @@ const DmCard = ({ name, status, avatar, id }) => {
           width={48}
           alt={name}
         />
-        <div className={styles.dmCardStatus} id={status} />
+        <div className={`status ${styles.dmCardStatus}`} id={status} />
       </div>
       <p className={styles.dmCardName}>{name}</p>
     </button>

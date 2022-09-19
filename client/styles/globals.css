@@ -12,7 +12,7 @@
 
 body{
   @apply bg-deepGrey text-secondary;
-
+  font-size: 0.95rem;
 }
 
 a {
